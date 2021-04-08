@@ -1,0 +1,15 @@
+{
+    "name": "cettervescre/design-patterns-tutorial",
+    "description": "Studying",
+    "autoload": {
+        "psr-4": {
+            "Cettervescre\\": "src/"
+        }
+    },
+    "require": {
+	    "monolog/monolog": "1.0.*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    }
+}
