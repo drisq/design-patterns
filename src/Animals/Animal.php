@@ -1,6 +1,6 @@
 <?php
 
-namespace Cettervescre;
+namespace Cettervescre\Animals;
 
 abstract class Animal
 {

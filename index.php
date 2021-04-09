@@ -6,9 +6,9 @@ use Cettervescre\Transport\Vehicle\Airplane;
 use Cettervescre\Transport\Vehicle\Helicopter;
 use Cettervescre\Transport\Airport;
 use Cettervescre\Transport\SmallAirport;
-use Cettervescre\Animal;
-use Cettervescre\Cat;
-use Cettervescre\Dog;
+use Cettervescre\Animals\Animal;
+use Cettervescre\Animals\Cat;
+use Cettervescre\Animals\Dog;
 
 dump((new Helicopter())->fly('Manila', 'Puerto Galera', '222'));
 dump((new Airplane())->fly('Manila', 'Caticlan', '268'));
