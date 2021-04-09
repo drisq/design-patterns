@@ -4,7 +4,7 @@ namespace Cettervescre;
 
 class Cat extends Animal
 {
-    public function meow()
+    public function makeSound()
     {
         return 'Meow...';
     }

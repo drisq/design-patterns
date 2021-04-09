@@ -2,13 +2,15 @@
 
 namespace Cettervescre;
 
-class Animal
+abstract class Animal
 {
     public $name;
     public $sex;
     public $age;
     public $weight;
     public $color;
+
+    abstract public function makeSound();
 
     public function breathe()
     {
