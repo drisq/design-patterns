@@ -1,6 +1,6 @@
 <?php
 
-namespace Cettervescre\Company;
+namespace Cettervescre\Company\Employee;
 
 class Programmer implements Employee
 {

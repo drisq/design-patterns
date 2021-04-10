@@ -1,6 +1,6 @@
 <?php
 
-namespace Cettervescre\Company;
+namespace Cettervescre\Company\Employee;
 
 class Tester implements Employee
 {

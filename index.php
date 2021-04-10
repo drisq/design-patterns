@@ -50,5 +50,6 @@ $cat->eating(new Hotdog());
 $cat->eating(new Salad());
 
 $gameDevCompany = new GameDevCompany();
+$outsourcingCompany = new OutsourcingCompany();
 
 dd($gameDevCompany->createSoftware());
