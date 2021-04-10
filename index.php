@@ -9,6 +9,9 @@ use Cettervescre\Transport\SmallAirport;
 use Cettervescre\Animals\Animal;
 use Cettervescre\Animals\Cat;
 use Cettervescre\Animals\Dog;
+use Cettervescre\Company\Company;
+use Cettervescre\Company\GameDevCompany;
+use Cettervescre\Company\OutsourcingCompany;
 use Cettervescre\Food\Sausage;
 use Cettervescre\Food\Hotdog;
 use Cettervescre\Food\Salad;
@@ -46,5 +49,6 @@ $cat->eating(new Sausage());
 $cat->eating(new Hotdog());
 $cat->eating(new Salad());
 
+$gameDevCompany = new GameDevCompany();
 
-dd($cat);
+dd($gameDevCompany->createSoftware());
