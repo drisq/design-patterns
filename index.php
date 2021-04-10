@@ -9,6 +9,9 @@ use Cettervescre\Transport\SmallAirport;
 use Cettervescre\Animals\Animal;
 use Cettervescre\Animals\Cat;
 use Cettervescre\Animals\Dog;
+use Cettervescre\Food\Sausage;
+use Cettervescre\Food\Hotdog;
+use Cettervescre\Food\Salad;
 use Cettervescre\University\Professor;
 use Cettervescre\University\Course;
 use Cettervescre\University\Student;
@@ -37,5 +40,11 @@ $professor->setStudent($student);
 $professor->teach($course);
 $professor->teach($mathematics);
 
+$cat = new Cat();
 
-dd($professor);
+$cat->eating(new Sausage());
+$cat->eating(new Hotdog());
+$cat->eating(new Salad());
+
+
+dd($cat);
