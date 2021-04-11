@@ -15,6 +15,12 @@ use Cettervescre\Company\OutsourcingCompany;
 use Cettervescre\Food\Sausage;
 use Cettervescre\Food\Hotdog;
 use Cettervescre\Food\Salad;
+use Cettervescre\Transport\Driver\Human;
+use Cettervescre\Transport\Driver\Robot;
+use Cettervescre\Transport\Engine\CombustionEngine;
+use Cettervescre\Transport\Engine\ElectricEngine;
+use Cettervescre\Transport\Engine\TeslaEngine;
+use Cettervescre\Transport\Transport;
 use Cettervescre\University\Professor;
 use Cettervescre\University\Course;
 use Cettervescre\University\Student;
@@ -52,4 +58,15 @@ $cat->eating(new Salad());
 $gameDevCompany = new GameDevCompany();
 $outsourcingCompany = new OutsourcingCompany();
 
-dd($gameDevCompany->createSoftware());
+dump($gameDevCompany->createSoftware());
+
+$transport = new Transport();
+
+$engine = new TeslaEngine();
+$driver = new Robot();
+
+$transport->setEngine($engine);
+$transport->setDriver($driver);
+
+
+dump($transport);
