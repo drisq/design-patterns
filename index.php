@@ -15,6 +15,8 @@ use Cettervescre\Company\OutsourcingCompany;
 use Cettervescre\Food\Sausage;
 use Cettervescre\Food\Hotdog;
 use Cettervescre\Food\Salad;
+use Cettervescre\SOLID\S\Employee;
+use Cettervescre\SOLID\S\TimeSheetReport;
 use Cettervescre\Transport\Driver\Human;
 use Cettervescre\Transport\Driver\Robot;
 use Cettervescre\Transport\Engine\CombustionEngine;
@@ -68,5 +70,12 @@ $driver = new Robot();
 $transport->setEngine($engine);
 $transport->setDriver($driver);
 
-
 dump($transport);
+
+$employee = new Employee();
+$employee->setName('Janszen Kiel Jose');
+$dtr = new TimeSheetReport();
+
+dump($dtr->print($employee));
+
+
