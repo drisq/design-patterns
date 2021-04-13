@@ -15,6 +15,7 @@ use Cettervescre\Company\OutsourcingCompany;
 use Cettervescre\Food\Sausage;
 use Cettervescre\Food\Hotdog;
 use Cettervescre\Food\Salad;
+use Cettervescre\SOLID\O\Order;
 use Cettervescre\SOLID\S\Employee;
 use Cettervescre\SOLID\S\TimeSheetReport;
 use Cettervescre\Transport\Driver\Human;
@@ -77,5 +78,11 @@ $employee->setName('Janszen Kiel Jose');
 $dtr = new TimeSheetReport();
 
 dump($dtr->print($employee));
+
+$order = new Order();
+
+$order->setShippingType('ground');
+
+dump($order->getShippingCost());
 
 
