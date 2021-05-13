@@ -15,6 +15,8 @@ use Cettervescre\Company\OutsourcingCompany;
 use Cettervescre\Food\Sausage;
 use Cettervescre\Food\Hotdog;
 use Cettervescre\Food\Salad;
+use Cettervescre\SOLID\O\Air;
+use Cettervescre\SOLID\O\Ground;
 use Cettervescre\SOLID\O\Order;
 use Cettervescre\SOLID\S\Employee;
 use Cettervescre\SOLID\S\TimeSheetReport;
@@ -81,8 +83,10 @@ dump($dtr->print($employee));
 
 $order = new Order();
 
-$order->setShippingType('ground');
+$order->setShippingType(new Air());
 
 dump($order->getShippingCost());
+
+
 
 

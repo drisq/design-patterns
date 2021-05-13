@@ -2,11 +2,13 @@
 
 namespace Cettervescre\SOLID\O;
 
+use Cettervescre\SOLID\O\Shipping;
+
 class Order
 {
     private $lineItems;
 
-    private $shipping;
+    private Shipping $shipping;
 
     public function getTotal()
     {
@@ -18,28 +20,14 @@ class Order
         return 19;
     }
 
-    public function setShippingType($st)
+    public function setShippingType(Shipping $shipping)
     {
-        $this->shipping = $st;
+        $this->shipping = $shipping;
     }
 
     public function getShippingCost()
     {
-        if ($this->shipping == 'ground') {
-            // Free ground delivery for big orders.
-            if ($this->getTotal() > 100) {
-                return 0;
-            }
-            // $1.5 per kilogram, but $10 minimum.
-            return max(10, $this->getTotalWeight() * 1.5);
-        }
-
-        if ($this->shipping == 'air') {
-            // $3 per kilogram, but $20 minimum.
-            return max(20, $this->getTotalWeight() * 3);
-        }
-
-
+        return $this->shipping->getCost($this);
     }
 
     public function getShippingDate()
