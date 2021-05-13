@@ -10,14 +10,28 @@ class Order
 
     private Shipping $shipping;
 
+    private $total;
+
+    private $weight;
+
+    public function setTotal($total)
+    {
+        $this->total = $total;
+    }
+
     public function getTotal()
     {
-        return 78;
+        return $this->total;
+    }
+
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
     }
 
     public function getTotalWeight()
     {
-        return 19;
+        return $this->weight;
     }
 
     public function setShippingType(Shipping $shipping)

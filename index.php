@@ -82,10 +82,19 @@ $dtr = new TimeSheetReport();
 dump($dtr->print($employee));
 
 $order = new Order();
+$order2 = new Order();
 
 $order->setShippingType(new Air());
+$order2->setShippingType(new Ground());
 
-dump($order->getShippingCost());
+$order->setTotal(85.4);
+$order->setWeight(55);
+
+$order2->setTotal(67);
+$order2->setWeight(49);
+
+dump($order, $order2);
+dump($order->getShippingCost(), $order2->getShippingCost());
 
 
 
