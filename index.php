@@ -15,6 +15,11 @@ use Cettervescre\Company\OutsourcingCompany;
 use Cettervescre\Food\Sausage;
 use Cettervescre\Food\Hotdog;
 use Cettervescre\Food\Salad;
+use Cettervescre\SOLID\L\Cat as LCat;
+use Cettervescre\SOLID\L\CerealMachine;
+use Cettervescre\SOLID\L\FishMachine;
+use Cettervescre\SOLID\L\GeneralCerealMachine;
+use Cettervescre\SOLID\L\JoeyCat;
 use Cettervescre\SOLID\O\Air;
 use Cettervescre\SOLID\O\Ground;
 use Cettervescre\SOLID\O\Order;
@@ -95,6 +100,12 @@ $order2->setWeight(49);
 
 dump($order, $order2);
 dump($order->getShippingCost(), $order2->getShippingCost());
+
+$cat = new LCat;
+$machine = new GeneralCerealMachine;
+
+dump($machine->feed($cat));
+dump($cat->eatingMachine());
 
 
 
