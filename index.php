@@ -17,9 +17,13 @@ use Cettervescre\Food\Hotdog;
 use Cettervescre\Food\Salad;
 use Cettervescre\SOLID\L\Cat as LCat;
 use Cettervescre\SOLID\L\CerealMachine;
+use Cettervescre\SOLID\L\Document;
 use Cettervescre\SOLID\L\FishMachine;
 use Cettervescre\SOLID\L\GeneralCerealMachine;
 use Cettervescre\SOLID\L\JoeyCat;
+use Cettervescre\SOLID\L\Project;
+use Cettervescre\SOLID\L\ReadOnlyDocument;
+use Cettervescre\SOLID\L\WritableDocument;
 use Cettervescre\SOLID\O\Air;
 use Cettervescre\SOLID\O\Ground;
 use Cettervescre\SOLID\O\Order;
@@ -106,6 +110,21 @@ $machine = new GeneralCerealMachine;
 
 dump($machine->feed($cat));
 dump($cat->eatingMachine());
+
+$document1 = new Document('kiel.php', 'This is a test');
+$document2 = new Document('cheng.php', 'This is a cheng file.');
+$document3 = new Document('mark.php', 'This is a mark file.');
+$document4 = new WritableDocument('roice.php', 'This is a roice file.');
+
+$project = new Project;
+
+$project->setDocument($document1, $document2, $document3, $document4);
+
+
+dump($document1, $document2, $document3, $document4);
+dump($project);
+
+$project->saveAll();
 
 
 
